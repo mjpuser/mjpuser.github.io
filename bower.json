@@ -1,0 +1,13 @@
+{
+  "name": "mjpuser.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mjpuser/mjpuser.github.io",
+  "authors": [
+    "Matthew Prestifilippo <m.prestifilippo@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}
