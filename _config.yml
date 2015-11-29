@@ -7,4 +7,4 @@ url: "http://matt.prestifilippo.org" # the base hostname & protocol for your sit
 timezone: America/New_York
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
