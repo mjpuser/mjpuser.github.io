@@ -2,7 +2,6 @@
 layout: post
 ---
 
-# Introduction to HTML
 The very first thing to know about web development is HTML.  **HTML is the language used by your browser to render a website.**  Let's start off with an example.  Check out the code and it's rendered counterpart below:
 
 #### HTML code

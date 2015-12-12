@@ -3,7 +3,7 @@ title: Matthew Prestifilippo
 email: m.prestifilippo@gmail.com
 description: Web Developer
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://matt.prestifilippo.org" # the base hostname & protocol for your site
+url: "http://prestifilippo.org" # the base hostname & protocol for your site
 timezone: America/New_York
 
 # Build settings
