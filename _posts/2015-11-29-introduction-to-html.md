@@ -91,25 +91,6 @@ The tree structure doesn't embody a tree as in a maple tree.  Instead, it embodi
 >
 > * Nest an `<h1>` element inside of a `<p>` element like this: `<p>beginning <h1>title</h1> ending</p>`.  What happens to the text?
 
-
-<a id="exercise-2"></a>
-
-### Exercise 2: Create your own document
-
-> You have the knowledge to create your first document, so we need to strengthen your confidence and skills by building a document from scratch.
->
-> 1. Download a code editor if you don't have one already.  I recommend <a href="https://atom.io/" target="_blank" hack="_">Atom</a>.
->
-> 2. Open your code editor, and create a file named "index.html"
->
-> 3. Create a document that:
-> <ul style="list-style: disc; font-size: 14px;">
-    <li>Has the title "My Interests"</li>
-    <li>Specifies you as the author in its metdata</li>
-    <li>Displays a headline "My Interests"</li>
-    <li>List 3 interests (they don't have to be real).</li></ul>
-> <a href="/demos/html/interests.html" target="_blank" hack="_">Click here to see a sample solution</a>
-
 ### What tags do I use?
 
 If you tried out <a href="#exercise-2">exercise 2</a>, you may have found yourself wondering what tags to use.  This is a common problem with first timers, and will happen throughout your career.  You may have listed your 3 interests in side of one paragraph with `<p>1. soccer, 2. football, 3. hockey</p>` or you may have used the `<ul>` tag that was used in the <a href="#example">example</a> at the beginning of this article.  So which tag should is the correct one?
@@ -219,6 +200,30 @@ which will render
 1 < 10
 {% endhighlight %}
 
+
+<a id="exercise-2"></a>
+
+### Exercise 2: Create your own document
+
+> You have the knowledge to create your first document, so we need to strengthen your confidence and skills by building a document from scratch.
+>
+> 1. Download a code editor if you don't have one already.  I recommend <a href="https://atom.io/" target="_blank" hack="_">Atom</a>.
+>
+> 2. Open your code editor, and create a file named "index.html"
+>
+> 3. Create a document that:
+>
+> 3. Has the title "My Interests"
+>
+> 3. Specifies you as the author in its metdata
+>
+> 3. Displays a headline "My Interests"
+>
+> 3. List 3 interests (they don't have to be real).
+>
+> 4. Style headline so that it is green.
+>
+> <a href="/demos/html/interests.html" target="_blank" hack="_">Click here to see a sample solution</a>
 
 
 <br/><br/>
