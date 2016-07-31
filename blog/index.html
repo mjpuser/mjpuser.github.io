@@ -3,12 +3,16 @@ layout: default
 ---
 
 
-<section id="articles">
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+<section id="about">
+    <div class="container">
+      <section id="articles">
+          <ul>
+            {% for post in site.posts %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+      </section>
+   </div>
 </section>

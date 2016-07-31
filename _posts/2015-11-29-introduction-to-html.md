@@ -8,7 +8,7 @@ HTML is the **language used by all browsers to render a website.**  HTML stands 
 Hypertext is a term for text that is connected via links.  The idea is that if you need to learn more about a term or phrase, you can click on that term, and more information will be presented.
 
 ### Markup Language
-Markup Language, in general, is a system for annotating a document.  You may be thinking of modern websites today as being very interactive, and less document oriented, but the early Internet was really just a set of pages that you could read that were **hyperlinked** together.  All of these documents needed to be *marked up* to specify headings, hyperlinks, and so on for proper formatting.
+Markup Language, in general, is a system for annotating a document.  You may think of modern websites today as interactive applications, and less document oriented, but the early Internet was really just a set of pages that you could read that were **hyperlinked** together.  All of these documents needed to be *marked up* to specify headings, hyperlinks, and so on for proper formatting.
 
 Let's move on to a basic example to see how it works.  Check out the code and its rendered counterpart below:
 
@@ -118,7 +118,7 @@ If you tried out <a href="#exercise-2">exercise 2</a>, you may have found yourse
 
 When writing HTML, you are really just categorizing and describing your data.  For example, if you have a list of items, you should probably take advantage of the list tags `<ul>` and `<ol>` to display your data.  If you are presenting a navigation section, you should use the `<nav>` tag.  If you are displaying an article, you should use the `<article>` tag.  You could technically *mark up* a list with a `<p>` tag, but then you lose semantics.  In order to know when to use which tag, it's important to get comfortable with all of the HTML tags.  There is a <a href="https://www.w3.org/TR/html-markup/elements-by-function.html" target="_blank" hack="_">list of HTML elements by function here</a> to help decide which tags to use.  But, lets check out some of the most common tags, first.
 
-### Common tags
+## Common tags
 
 #### a
 The link is one of the most important HTML elements.  The format of a link is `<a href="http://example.com/">This is the link text</a>`.  Most of the elements we have seen did not have anything other than the tag name inside of the `<` and `>` symbols.  The `href="..."` part is called an **attribute**, and the general form of an attribute is **attributeName="attributeValue"**.  The **href** attribute specifies the webpage to go to when clicking on the `<a>` element.  Aside from linking to other webpages, you can link to other elements so that you can jump to other sections of the page.  One common usage of this is a table of contents.  You can do this by setting an **id** attribute on the element you want to jump to and linking them by setting the **href** to the same value as the id, but with a `#` in front.  Ex:
@@ -204,10 +204,11 @@ We have covered all of the concrete technical aspects of coding, so now we shoul
 This is also readable, but now it takes away from the actual flow of the prose that is in the `<p>` element.  Competing rules are cause for debate, so decisions like this come down to taste.  It is up to you to choose which style you'd like to follow.  Both are acceptable.
 
 ### Whitespace
-> The contents of the `<p>` element above were split on separate lines.  Won't this format the text in separate lines when it is rendered?  Surprisingly, no, it does not affect how the text is rendered.  When HTML is rendered, there is only one space between two text nodes no matter how much space you put between them.  If you need to add more space between text, there are two options.  You can either use the `<pre>` tag, or you could use something called a character entity reference.  The character entity reference for a blank space is `&nbsp;` where nbsp is an acronym for non-breaking space.
 
-### The Escape Sequence
-Since we use the &lt; and &gt; symbol to denote the beginning of a tag, you might be wondering how to render a &lt;.  It might seem easy to know when a &lt; is the start of a tag or part of the text, but computers can't use any abstract contextual information (*yet*) to determine what was meant by the programmer.  So, long story short, &lt; is reserved to only be used when starting a tag.  In order to get around this limitation, an escape character is used: `&`.  An **escape character is a character that starts an alternative interpretation of the characters to follow**. So when the browser sees a &amp;, it "escapes" the normal rendering process, and starts a special rendering process to render the following sequence of characters.  The *subsequent characters* are what is known as the character entity reference.  Here is a <a href="http://www.freeformatter.com/html-entities.html" target="_blank" hack="_">complete list of all of the HTML entities</a>.
+The contents of the `<p>` element above were split on separate lines.  Won't this format the text in separate lines when it is rendered?  Surprisingly, no, it does not affect how the text is rendered.  When HTML is rendered, there is only one space between two text nodes no matter how much space you put between them.  If you need to add more space between text, there are two options.  You can either use the `<pre>` tag, or you could use something called a character entity reference.  The character entity reference for a blank space is `&nbsp;` where nbsp is an acronym for non-breaking space.
+
+### Entities
+Since we use the &lt; and &gt; symbol to denote the beginning of a tag, you might be wondering how to render a &lt;.  It might seem easy to know when a &lt; is the start of a tag or part of the text, but computers can't use any abstract contextual information (*yet*) to determine what was meant by the programmer.  So, long story short, &lt; is reserved to only be used when starting a tag.  In order to get around this limitation, an escape character is used: `&`.  An **escape character is a character that starts an alternative interpretation of the characters to follow**. So when the browser sees a &amp;, it "escapes" the normal rendering process, and starts a special rendering process to render the following sequence of characters.  The *subsequent characters* are what is known as the **character entity reference**.  Here is a <a href="https://dev.w3.org/html5/html-author/charref" target="_blank" hack="_">complete list of all of the HTML entities</a>.
 
 So to render the &lt; symbol, you can type
 {% highlight html %}
@@ -227,12 +228,15 @@ which will render
 
 #### CSS
 
-CSS stands for **Cascading Style Sheets**, and it is the **style language for describing how the HTML elements are rendered**.
+CSS stands for **Cascading Style Sheets**, and it is the **style language for describing how the HTML elements are rendered**.  You can include stylesheets into your html by using the link tag which should be included inside of the head element.  Ex: `<link href="/main.css" rel="stylesheet" type="text/css"/>`.
 
-#### XML &amp; DTD
 
-XML is related to HTML in that they are both Markup Languages, but XML is a more general form of HTML.  You can specify a DTD which stands for **Document Type Definition**.  This is where all of the elements and attributes are defined for an XML document.  Ever since HTML5, though, <a href="https://www.w3.org/TR/html5/the-xhtml-syntax.html#writing-xhtml-documents" target="_blank" hack="_">there is no longer a DTD for HTML5</a>.  It turns out that DTDs are suited for some of the wanted features in HTML5 such as all attributes that start with `data-` are valid attributes.
+#### The box model
 
+![the box model](/images/posts/html/box-model.png "the box model")
+
+The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" target="_blank" hack="_">box model describes how an element is rendered on the page</a>.  It is very important to understand this before trying to add complicated styles, but it is very simple.  Every element is rendered using the box model which has four parts:
+**content width**, **padding**, **border**, and **margin**.
 
 #### MDN
 
@@ -246,13 +250,20 @@ The W3C stands for World Wide Web Consortium, which is the international standar
 
 The DOM stands for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank" hack="_">Document Object Model</a>.  It is an Application Programming Interface (API) for updating the HTML on the page.  You may hear something like "The DOM is ready."  This is because it takes time for the HTML downloaded, and once it is downloaded, the text has to be parsed by the browser to create an internal representation.  Once it has done that, the DOM is ready.  This is different than the page being "loaded".  Even though the DOM is complete, images, videos, or CSS must be loaded to render the page properly.  Once all other assets are loaded then the page has "loaded".  So just be aware that there are two important events related to loading the page.
 
-#### The box model
 
-![the box model](/images/posts/html/box-model.png "the box model")
+#### XML &amp; DTD
 
-The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" target="_blank" hack="_">box model describes how an element is rendered on the page</a>.  It is very important to understand this before trying to add complicated styles, but it is very simple.  Every element is rendered using the box model which has four parts:
-**content width**, **padding**, **border**, and **margin**.
-
+XML is related to HTML in that they are both Markup Languages, but XML is a more general form of HTML.  You can specify a DTD which stands for **Document Type Definition**.  This is where all of the elements and attributes are defined for an XML document.  Ever since HTML5, though, <a href="https://www.w3.org/TR/html5/the-xhtml-syntax.html#writing-xhtml-documents" target="_blank" hack="_">there is no longer a DTD for HTML5</a>.  It turns out that DTDs are suited for some of the wanted features in HTML5 such as all attributes that start with `data-` are valid attributes.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 <!-- classes, ids -->
 <!-- rendering, box model, css -->
