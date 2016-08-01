@@ -243,6 +243,10 @@ CSS stands for **Cascading Style Sheets**, and it is the **style language for de
 The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" target="_blank" hack="_">box model describes how an element is rendered on the page</a>.  It is very important to understand this before trying to add complicated styles, but it is very simple.  Every element is rendered using the box model which has four parts:
 **content width**, **padding**, **border**, and **margin**.
 
+#### HTTP
+
+HTTP stands for HyperText Transfer Protocol.  HTTP is the _way_ that your browser retrieves HTML, images, css, and all other media over the Internet on your browser.  I will have a blog post on HTTP soon!
+
 #### MDN
 
 Mozilla has amazing documentation on everything web related called <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" hack="_">the Mozilla Developer Network, or MDN</a>.
