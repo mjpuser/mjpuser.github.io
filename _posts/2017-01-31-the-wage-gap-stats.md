@@ -46,6 +46,7 @@ For this article, I ended up using <a href="https://www.census.gov/programs-surv
 * I only included non married people.  I thought this would remove the argument that including married spouses might affect their devotion to the occupation
 * I only included people with at least a bachelors degree
 * I only included people that worked 48 - 52 weeks per year
+* I only included people who worked 40-41 hours per week
 * I filtered out salaries < 12,000 since if you are working 50 weeks a year on minimum wage, you should make at least 15k before taxes, and 13.9k after taxes.  So I'm guessing it is bad data, or there is some illegal garbage happening.  There were some salaries at 600 bucks which would mean you're homeless and making 2 bucks a day.
 * I broke up the data from 20 - 30 and 30 - 40 year olds.  I didn't include more data because it's just a lot.  If you want me to add it, contact me.
 
